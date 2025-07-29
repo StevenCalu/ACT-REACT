@@ -21,6 +21,33 @@ function App() {
     "Revisión eléctrica"
   ];
 
+  const cabecera = ["Servicio", "Duración", "Precio aproximado"];
+  const datos = [
+    ["Cambio de aceite", "30 minutos", "$25"],
+    ["Revisión de frenos", "45 minutos", "$35"],
+    ["Alineación y balanceo", "1 hora", "$40"],
+    ["Diagnóstico computarizado", "1 hora", "$50"]
+  ];
+
+  const [nombre, setNombre] = useState('');
+  const [correo, setCorreo] = useState('');
+  const [mensaje, setMensaje] = useState('');
+
+  const manejarEnvio = (e) => {
+    e.preventDefault();
+
+    console.log("Formulario enviado.");
+    console.log("Nombre:", nombre);
+    console.log("Correo:", correo);
+    console.log("Mensaje:", mensaje);
+
+    alert(`Gracias por contactarnos, ${nombre}. Pronto responderemos a tu correo: ${correo}`);
+
+    setNombre('');
+    setCorreo('');
+    setMensaje('');
+  };
+
   return (
     <div className="container mt-5">
       <section className="mb-5">
@@ -56,6 +83,13 @@ function App() {
           className="fw-semibold mb-2"
         />
         <Lista elementos={servicios} className="list-group mb-4" />
+
+        <Titulo
+          texto="Detalles de servicios"
+          nivel={4}
+          className="fw-semibold mb-2"
+        />
+        <Tabla cabecera={cabecera} datos={datos} className="mb-4" />
 
         <Enlace
           href="https://www.mecanicoautomotriz.org/"
