@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
 import Imagen from './components/basicos/imagen';
 import Titulo from './components/basicos/titulo';
+import Parrafo from './components/basicos/parrafo';
 import './lib/bootstrap-5.3.6-dist/css/bootstrap.min.css';
 
 function App() {
+
 
   return (
     <div className="container mt-5">
@@ -29,6 +30,11 @@ function App() {
           className="text-secondary mb-4"
         />
 
+        <Parrafo
+          texto="Ofrecemos servicios completos e integrales de mecánica automotriz, orientados a mantener y optimizar el funcionamiento de su vehículo, sin importar la marca o el modelo..."
+          className="text-muted fst-italic mb-4"
+        />
+        
       </section>
     </div>
   );
