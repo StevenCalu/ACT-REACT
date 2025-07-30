@@ -7,7 +7,12 @@ import Lista from './components/listas-tablas/lista';
 import Tabla from './components/listas-tablas/tabla';
 import Formulario from './components/formularios/formulario';
 import Boton from './components/formularios/boton';
-import Input from './components/formularios/input';
+import InputText from './components/inputs-especiales/input-text';
+import InputEmail from './components/inputs-especiales/input-email';
+import InputPassword from './components/inputs-especiales/input-password';
+import InputSearch from './components/inputs-especiales/input-search';
+import InputTel from './components/inputs-especiales/input-tel';
+import InputURL from './components/inputs-especiales/input-url';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './lib/bootstrap-5.3.6-dist/css/bootstrap.min.css';
 
@@ -108,8 +113,7 @@ function App() {
           <div className="card-body">
             <Formulario onSubmit={manejarEnvio}>
 
-              <Input
-                type="text"
+              <InputText
                 id="nombre"
                 label="Nombre completo:"
                 className="form-control"
@@ -120,8 +124,7 @@ function App() {
                 minLength={2}
               />
 
-              <Input
-                type="email"
+              <InputEmail
                 id="correo"
                 label="Correo electrónico:"
                 className="form-control"
